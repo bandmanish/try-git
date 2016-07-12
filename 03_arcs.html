@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas | Introduction</title>
+	<!-- To create Border and Background-->
+    <style>
+      canvas {
+       border:2px solid #fa4b2a;
+	   background-color:#fff;
+      }
+    </style>
+</head>
+<body>
+<canvas id="first_Canvas" width="500" height="500"></canvas>
+<script type="text/javascript">
+	var context  = document.getElementById('first_Canvas').getContext("2d");
+	var counterClockwise = true;
+
+	context.beginPath();
+	context.lineWidth=10;
+	context.strokeStyle="#fa4b2a";
+	x=150;
+	y=150;
+	var radius= 90;
+	starting=1.99*Math.PI;
+	ending = 2*Math.PI;
+	context.arc(x, y, radius, starting, ending, counterClockwise);
+
+	context.stroke();
+</script>
+</body>
+</html>
